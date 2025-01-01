@@ -39,7 +39,20 @@ const AppContent = () => {
                 mb: 3,
                 flex: 1,
                 px: { xs: 2, sm: 3 },
-                overflow: 'auto'
+                overflow: 'auto',
+                '&::-webkit-scrollbar': {
+                  width: '8px',
+                },
+                '&::-webkit-scrollbar-track': {
+                  background: 'transparent',
+                },
+                '&::-webkit-scrollbar-thumb': {
+                  background: theme.palette.mode === 'light' ? '#e0e0e0' : '#424242',
+                  borderRadius: '4px',
+                },
+                '&::-webkit-scrollbar-thumb:hover': {
+                  background: theme.palette.mode === 'light' ? '#bdbdbd' : '#616161',
+                }
               }}
             >
               <Box sx={{ maxWidth: 1200, mx: 'auto' }}>

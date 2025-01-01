@@ -123,7 +123,23 @@ const YeniSikayet = () => {
   };
 
   return (
-    <Container maxWidth="lg" sx={{ mt: isMobile ? 2 : 4 }}>
+    <Container maxWidth="lg" sx={{ 
+      mt: isMobile ? 2 : 4,
+      overflow: 'auto',
+      '&::-webkit-scrollbar': {
+        width: '8px',
+      },
+      '&::-webkit-scrollbar-track': {
+        background: 'transparent',
+      },
+      '&::-webkit-scrollbar-thumb': {
+        background: mode === 'light' ? '#e0e0e0' : '#424242',
+        borderRadius: '4px',
+      },
+      '&::-webkit-scrollbar-thumb:hover': {
+        background: mode === 'light' ? '#bdbdbd' : '#616161',
+      }
+    }}>
       <Box
         sx={{
           display: 'flex',
